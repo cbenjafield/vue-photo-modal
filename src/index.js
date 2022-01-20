@@ -6,9 +6,9 @@ export default {
 
         this.installed = true
 
-        const VuePhotoModal = new VuePhotoModal(Vue)
+        const photoModal = new VuePhotoModal(Vue)
 
-        Vue.prototype.$photoModal = VuePhotoModal
-        Vue.prototype['photoModal'] = VuePhotoModal
+        Vue.prototype.$photoModal = photoModal
+        Vue.prototype['photoModal'] = photoModal
     }
 }
