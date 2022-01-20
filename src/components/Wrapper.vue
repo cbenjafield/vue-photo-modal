@@ -28,6 +28,10 @@ export default {
             images: []
         }
     },
+    created() {
+        events.$on('add', this.add)
+        events.$on('close', this.close)
+    },
     methods: {
         clearImages() {
             this.images = []
@@ -40,7 +44,7 @@ export default {
             image.uuid = uuidv4()
             this.images.push(image)
         },
-        
+
         // Close the image modal.
         close(uuid) {
             this.images.splice(this.images.findIndex(img => img.uuid === uuid))
