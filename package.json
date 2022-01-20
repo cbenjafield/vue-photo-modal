@@ -2,7 +2,7 @@
   "name": "vue-photo-modal",
   "version": "0.1.0",
   "description": "A really simple photo modal plugin using Tailwind and Vue.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
