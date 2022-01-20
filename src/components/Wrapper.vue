@@ -7,7 +7,6 @@
             leave-active-class="transition duration-150 ease-in"
             leave-class="opacity-100"
             leave-to-class="opacity-0"
-            class="fixed inset-0 bg-black opacity-50"
         >
             <modal v-for="image in images" :key="image.uuid" :image="image" :close="() => close(image.uuid)" />
         </transition-group>
