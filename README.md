@@ -2,6 +2,8 @@
 
 A really simple modal plugin to show images larger when using Vue and Tailwind.
 
+![Vue Photo Modal example](https://user-images.githubusercontent.com/4989492/150506726-b21d19c5-4861-4071-9153-5d2ae5d086ed.jpg)
+
 ## Installation
 
 The plugin is available from NPM.
