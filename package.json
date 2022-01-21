@@ -1,6 +1,6 @@
 {
   "name": "vue-photo-modal",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A really simple photo modal plugin using Tailwind and Vue.",
   "main": "src/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/cbenjafield/vue-photo-modal.git"
   },
   "author": "Charlie Benjafield",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cbenjafield/vue-photo-modal/issues"
   },
