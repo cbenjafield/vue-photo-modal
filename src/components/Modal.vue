@@ -1,7 +1,7 @@
 <template>
     <div class="photo-modal fixed inset-0 flex items-center justify-center p-6 max-h-screen max-w-screen">
         <div class="fixed inset-0 bg-black opacity-50" @click.prevent="close"></div>
-        <div class="max-h-full max-w-full overflow-hidden rounded-md bg-white relative shadow-md">
+        <div class="max-h-full max-w-full overflow-hidden rounded-md bg-white relative shadow-md" :style="`height:${height}px`" ref="imageWrapper">
             <img 
                 class="max-w-full max-h-full"
                 :class="image.class || null"
@@ -9,6 +9,7 @@
                 :alt="image.alt || null"
                 :width="image.width || null"
                 :height="image.height || null"
+                ref="image"
             >
             <button
                 class="appearance-none focus:outline-none opacity-50 hover:opacity-100 transition duration-150 ease-in-out inline-flex items-center justify-center text-white hover:text-gray-500 focus:ring-2 focus:ring-offset-0 focus:ring-indigo-600 w-8 h-8 overflow-hidden absolute top-4 right-4 cursor-pointer rounded-full"
@@ -29,6 +30,16 @@ export default {
     props: {
         image: Object,
         close: Function
+    },
+    data() {
+        return {
+            height: 0
+        }
+    },
+    mounted() {
+        this.$nextTick(() => {
+            this.height = this.$refs.imageWrapper.clientHeight
+        })
     }
 }
 </script>
