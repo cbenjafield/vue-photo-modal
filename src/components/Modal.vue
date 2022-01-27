@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed inset-0 flex items-center justify-center p-6 max-h-screen max-w-screen">
+    <div class="photo-modal fixed inset-0 flex items-center justify-center p-6 max-h-screen max-w-screen">
         <div class="fixed inset-0 bg-black opacity-50" @click.prevent="close"></div>
         <div class="max-h-full max-w-full overflow-hidden rounded-md bg-white relative shadow-md">
             <img 
@@ -32,3 +32,8 @@ export default {
     }
 }
 </script>
+<style lang="css">
+.photo-modal {
+    z-index: 10000;
+}
+</style>
