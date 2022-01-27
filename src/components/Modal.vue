@@ -1,7 +1,7 @@
 <template>
     <div class="photo-modal fixed inset-0 flex items-center justify-center p-6 max-h-screen max-w-screen">
         <div class="fixed inset-0 bg-black opacity-50" @click.prevent="close"></div>
-        <div class="max-h-full max-w-full overflow-hidden rounded-md bg-white relative shadow-md" :style="`height:${height}px`" ref="imageWrapper">
+        <div class="max-h-full max-w-full overflow-hidden rounded-md bg-white relative shadow-md" :style="{ height: height ? `${height}px` : null }" ref="imageWrapper">
             <img 
                 class="max-w-full max-h-full"
                 :class="image.class || null"
@@ -38,7 +38,7 @@ export default {
     },
     mounted() {
         this.$nextTick(() => {
-            this.height = this.$refs.imageWrapper.clientHeight
+            this.height = this.$refs.imageWrapper.offsetHeight
         })
     }
 }
